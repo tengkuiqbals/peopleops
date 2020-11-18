@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Organizations</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Org name</th>
+      <th>Org description</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @organizations.each do |organization| %>
+      <tr>
+        <td><%= organization.org_name %></td>
+        <td><%= organization.org_description %></td>
+        <td><%= link_to 'Show', organization %></td>
+        <td><%= link_to 'Edit', edit_organization_path(organization) %></td>
+        <td><%= link_to 'Destroy', organization, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<% if current_user.role =='Admin' %>
+  <%= link_to 'New Organization', new_organization_path %>
+<% elsif current_user.role =='Service' %>
+<% elsif current_user.role =='Expat' %>  
+<% end %>
+

@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Embassies</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Emb name</th>
+      <th>Emb description</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @embassies.each do |embassy| %>
+      <tr>
+        <td><%= embassy.emb_name %></td>
+        <td><%= embassy.emb_description %></td>
+        <td><%= link_to 'Show', embassy %></td>
+        <td><%= link_to 'Edit', edit_embassy_path(embassy) %></td>
+        <td><%= link_to 'Destroy', embassy, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<% if current_user.role =='Admin' %>
+  <%= link_to 'New Embassy', new_embassy_path %>
+<% elsif current_user.role =='Service' %>
+<% elsif current_user.role =='Expat' %>  
+<% end %>
+

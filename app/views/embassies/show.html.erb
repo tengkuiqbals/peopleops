@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Emb name:</strong>
+  <%= @embassy.emb_name %>
+</p>
+
+<p>
+  <strong>Emb description:</strong>
+  <%= @embassy.emb_description %>
+</p>
+
+<%= link_to 'Edit', edit_embassy_path(@embassy) %> |
+<%= link_to 'Back', embassies_path %>

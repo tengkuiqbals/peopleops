@@ -1,0 +1,177 @@
+<%= form_with(model: employee, local: true) do |form| %>
+  <% if employee.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(employee.errors.count, "error") %> prohibited this employee from being saved:</h2>
+
+      <ul>
+        <% employee.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :emp_id %>
+    <%= form.text_field :emp_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :emp_name %>
+    <%= form.text_field :emp_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :emp_birthdate %>
+    <%= form.date_select :emp_birthdate %>
+  </div>
+
+  <div class="field">
+    <%= form.label :emp_religion %>
+    <%= form.text_field :emp_religion %>
+  </div>
+
+  <div class="field">
+    <%= form.label :emp_orihire %>
+    <%= form.date_select :emp_orihire %>
+  </div>
+
+  <div class="field">
+    <%= form.label :emp_hire %>
+    <%= form.date_select :emp_hire %>
+  </div>
+
+  <div class="field">
+    <%= form.label :emp_resign %>
+    <%= form.date_select :emp_resign %>
+  </div>
+
+  <div class="field">
+    <%= form.label :emp_maritaldate %>
+    <%= form.date_select :emp_maritaldate %>
+  </div>
+
+  <div class="field">
+    <%= form.label :emp_compid %>
+    <%= form.text_field :emp_compid %>
+  </div>
+
+  <div class="field">
+    <%= form.label :emp_email %>
+    <%= form.text_field :emp_email %>
+  </div>
+
+  <div class="field">
+    <%= form.label :emp_gender %>
+    <%= form.text_field :emp_gender %>
+  </div>
+
+  <div class="field">
+    <%= form.label :emp_marital %>
+    <%= form.text_field :emp_marital %>
+  </div>
+
+  <div class="field">
+    <%= form.label :emp_bank %>
+    <%= form.text_field :emp_bank %>
+  </div>
+
+  <div class="field">
+    <%= form.label :emp_accbank %>
+    <%= form.text_field :emp_accbank %>
+  </div>
+
+  <div class="field">
+    <%= form.label :emp_accholder %>
+    <%= form.text_field :emp_accholder %>
+  </div>
+
+  <div class="field">
+    <%= form.label :emp_npwp %>
+    <%= form.text_field :emp_npwp %>
+  </div>
+
+  <div class="field">
+    <%= form.label :emp_ktp %>
+    <%= form.text_field :emp_ktp %>
+  </div>
+
+  <div class="field">
+    <%= form.label :emp_bpjstku %>
+    <%= form.text_field :emp_bpjstku %>
+  </div>
+
+  <div class="field">
+    <%= form.label :emp_bpjskes %>
+    <%= form.text_field :emp_bpjskes %>
+  </div>
+
+  <div class="field">
+    <%= form.label :job_name %>
+    <%= form.text_field :job_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :lev_name %>
+    <%= form.text_field :lev_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :branch_name %>
+    <%= form.text_field :branch_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :emp_mobile %>
+    <%= form.text_field :emp_mobile %>
+  </div>
+
+  <div class="field">
+    <%= form.label :emp_orgid1 %>
+    <%= form.text_field :emp_orgid1 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :emp_orgid4 %>
+    <%= form.text_field :emp_orgid4 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :emp_pp %>
+    <%= form.text_field :emp_pp %>
+  </div>
+
+  <div class="field">
+    <%= form.label :emp_linemgr %>
+    <%= form.text_field :emp_linemgr %>
+  </div>
+
+  <div class="field">
+    <%= form.label :emp_mgremail %>
+    <%= form.text_field :emp_mgremail %>
+  </div>
+
+  <div class="field">
+    <%= form.label :emp_status %>
+    <%= form.text_field :emp_status %>
+  </div>
+
+  <div class="field">
+    <%= form.label :emp_famcard %>
+    <%= form.text_field :emp_famcard %>
+  </div>
+
+  <div class="field">
+    <%= form.label :emp_nationality %>
+    <%= form.text_field :emp_nationality %>
+  </div>
+
+  <div class="field">
+    <%= form.label :salary %>
+    <%= form.number_field :salary %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
